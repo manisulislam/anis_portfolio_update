@@ -5,7 +5,6 @@ import pImg1 from "./assets/hotel_1.jpg";
 
 
 
-
 function App() {
   
 
@@ -217,7 +216,6 @@ function App() {
           </div>
         </section>
 
-        
        
         {/* timeline education*/}
         <section id="education">
