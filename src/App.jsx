@@ -2,6 +2,7 @@
 import './App.css';
 import Profile from "./assets/anisimage.png";
 import pImg1 from "./assets/hotel_1.jpg";
+import secondImg from "./assets/eco.jpg";
 
 
 
@@ -40,11 +41,14 @@ function App() {
         <div className='flex justify-center items-center p-2 mt-5'>
           <div className='p-5'>
             <h2 className='text-2xl font-bold text-white '>I am MD. Anisul Islam</h2>
-            <h2 className='text-2xl font-bold  mt-2 text-blue-700'>Backend Developer (Django)</h2>
-            <p className='text-1xl font-bold text-white mt-4'>I love keeping up with <br /> the latest tech trends and turning <br /> cool ideas into real things and, <br /> Knowledge of web applications writing code with optimization.</p>
+            <h2 className='text-2xl font-bold  mt-2 text-blue-700'>Full Stack Developer (Django and React)</h2>
+            <p className='text-1xl font-bold text-white mt-4'>As a highly motivated and detail-oriented Full Stack Developer <br />  with expertise in Django and React, <br /> I am eager to
+            leverage my skills in building dynamic and responsive web applications. <br /> Seeking to contribute to a forward-thinking <br />
+            company where I can apply my technical knowledge,<br /> problem-solving abilities, <br /> and passion for continuous
+            learning to develop innovative solutions<br /> that drive business success and enhance user experiences.</p>
             <div className='flex gap-4'>
               <div>
-                <a href="https://drive.google.com/file/d/1AVp7lqdVOWvF0IuxZ12OTt8dUcu-CTLP/view?usp=sharing" target='blank'>
+                <a href="https://drive.google.com/file/d/1Mt0TOSocyBGog1XIEN2mvs4A80mlT1H7/view?usp=sharing" target='blank'>
                   <button className="bg-blue-500 hover:bg-blue-700 mt-6 text-white font-bold py-2 px-4 rounded">
                     Resume
                   </button>
@@ -84,11 +88,19 @@ function App() {
 
                 </div>
                 <div className="p-4 bg-white  hover:bg-blue-900 rounded-lg shadow-md">
+                  <h3 className="text-1xl hover:text-white font-semibold text-gray-900">Tailwind CSS</h3>
+
+                </div>
+                <div className="p-4 bg-white  hover:bg-blue-900 rounded-lg shadow-md">
                   <h3 className="text-1xl hover:text-white font-semibold text-gray-900">Python</h3>
 
                 </div>
                 <div className="p-4 bg-white  hover:bg-blue-900 rounded-lg shadow-md">
                   <h3 className="text-1xl hover:text-white font-semibold text-gray-900">Django</h3>
+
+                </div>
+                <div className="p-4 bg-white  hover:bg-blue-900 rounded-lg shadow-md">
+                  <h3 className="text-1xl hover:text-white font-semibold text-gray-900">Django Rest Framework</h3>
 
                 </div>
               </div>
@@ -125,6 +137,10 @@ function App() {
                   <h3 className="text-1xl hover:text-white font-semibold text-gray-900">POSTGRESQL</h3>
 
                 </div>
+                <div className="p-4 bg-white  hover:bg-blue-900 rounded-lg shadow-md">
+                  <h3 className="text-1xl hover:text-white font-semibold text-gray-900">System Design</h3>
+
+                </div>
               </div>
               {/* Add more skill items as needed */}
             </div>
@@ -139,6 +155,10 @@ function App() {
                 </div>
                 <div className="p-4 bg-white   hover:bg-blue-900 rounded-lg shadow-md">
                   <h3 className="text-1xl hover:text-white font-semibold text-gray-900">REACT</h3>
+
+                </div>
+                <div className="p-4 bg-white   hover:bg-blue-900 rounded-lg shadow-md">
+                  <h3 className="text-1xl hover:text-white font-semibold text-gray-900">AWS</h3>
 
                 </div>
               </div>
@@ -163,6 +183,10 @@ function App() {
                 </div>
                 <div className="p-4 bg-white  hover:bg-blue-900 rounded-lg shadow-md">
                   <h3 className="text-1xl hover:text-white font-semibold text-gray-900">DEV TOOL</h3>
+
+                </div>
+                <div className="p-4 bg-white  hover:bg-blue-900 rounded-lg shadow-md">
+                  <h3 className="text-1xl hover:text-white font-semibold text-gray-900">POSTMAN</h3>
 
                 </div>
               </div>
@@ -206,8 +230,28 @@ function App() {
                     3. Write reviews if the user is authenticated and stays at that hotel. In the profile
                     section users can update and delete their reviews.</p>
                   <div className="mt-4 flex justify-between">
-                    <a href="https://github.com/manisulislam/hotel_booking" className="inline-block bg-gray-800 text-white py-2 px-4 rounded hover:bg-gray-900" target='blank'>GitHub</a>
-                    <a href="https://hotel-booking-r726.onrender.com/" className="inline-block bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-900" target='blank'>Live Link</a>
+                    <a href="https://github.com/manisulislam/hotel_booking"  className="inline-block bg-gray-800 text-white py-2 px-4 rounded hover:bg-gray-900" target='blank'>GitHub</a>
+                    <a href="https://hotel-booking-r726.onrender.com/"  className="inline-block bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-900" target='blank'>Live Link</a>
+                  </div>
+                </div>
+              </div>
+              {/* second project */}
+              <div className="bg-white overflow-hidden shadow-md rounded-lg transform transition duration-500 hover:scale-105">
+                <img className="w-full h-48 object-cover" src={secondImg} alt="Project 1" />
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-gray-900">➤ Eco Elite Empire</h3>
+                  <h3 className="text-1xl font-bold text-gray-900">Features:</h3>
+                  <p className="mt-2 text-gray-600">
+                      1.Authentication and Authorization: Implemented using Djoser, with email verification. <br />
+                      2. Email Notifications: Users receive notifications via email.<br />
+                      3. UI/UX: Developed a user-friendly interface with React and Tailwind CSS.<br />
+                      4. State Management: Utilized Redux Toolkit for managing user, cart, shipping, etc.<br />
+                      5. Payment Gateway: Integrated SSLCommerz sandbox for payment processing.<br />
+                      6. Review System: Users can write reviews. Includes a client dashboard to view overall activity.</p>
+                  <div className="mt-4 flex justify-between">
+                    <a href="https://github.com/manisulislam/eco_lite_empire_frontend"  className="inline-block bg-gray-800 text-white py-2 px-4 rounded hover:bg-gray-900" target='blank'>frontend</a>
+                    <a href="https://github.com/manisulislam/eco_elite_empire_backend" className="inline-block bg-gray-800 text-white py-2 px-4 rounded hover:bg-gray-900" target='blank'>Backend</a>
+                    
                   </div>
                 </div>
               </div>
