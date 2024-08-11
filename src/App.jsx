@@ -310,7 +310,7 @@ function App() {
             <div className="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="flex items-center">
 
-                <p className="text-gray-800">Baborer Bari, Sultatpur,<br />7 no ward,4340 <br />Raozan, Pourodhava, Chattogram</p>
+                <p className="text-gray-800">Baborer Bari, Sultatpur,<br />7 no ward,4340 <br />Raozan, Pouroshava, Chattogram</p>
               </div>
               <div className="flex items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-gray-600 mr-3" viewBox="0 0 24 24" fill="currentColor">
@@ -328,7 +328,7 @@ function App() {
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-gray-600 mr-3" viewBox="0 0 24 24" fill="currentColor">
                   <path fillRule="evenodd" d="M20 2H4a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zm-2.235 3.024c.526 0 .95.426.95.95v12.052c0 .524-.424.95-.95.95H8.236a.95.95 0 0 1-.95-.95V5.974c0-.524.424-.95.95-.95h9.529zM12 14.5v-7M9.5 12h5" clipRule="evenodd" />
                 </svg>
-                <a href="https://www.linkedin.com/in/manisulislam/" className="text-gray-800" target="blank">LinkedIn</a>
+                <a href="https://www.linkedin.com/in/mdanisul340/" className="text-gray-800" target="blank">LinkedIn</a>
               </div>
               <div className="flex items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-gray-600 mr-3" viewBox="0 0 24 24" fill="currentColor">
