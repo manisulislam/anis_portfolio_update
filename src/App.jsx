@@ -48,14 +48,14 @@ function App() {
             learning to develop innovative solutions<br /> that drive business success and enhance user experiences.</p>
             <div className='flex gap-4'>
               <div>
-                <a href="https://drive.google.com/file/d/1Mt0TOSocyBGog1XIEN2mvs4A80mlT1H7/view?usp=sharing" target='blank'>
+                <a href="https://drive.google.com/file/d/1tPjvEIgMi3yd4aPctXAD4XPLrGm-l_8j/view?usp=sharing" target='blank'>
                   <button className="bg-blue-500 hover:bg-blue-700 mt-6 text-white font-bold py-2 px-4 rounded">
                     Resume
                   </button>
                 </a>
               </div>
               <div>
-                <a href="https://drive.google.com/file/d/17sD5On3l_lmjab_OI55HseuBjjtg5LHj/view?usp=sharing" target='blank'>
+                <a href="https://drive.google.com/file/d/18b8QpCu0KDSwp5dQX2xHFMZOHUaIPcoD/view?usp=sharing" target='blank'>
                   <button className="bg-blue-500 hover:bg-blue-700 mt-6 text-white font-bold py-2 px-4 rounded">
                     CV
                   </button>
@@ -231,7 +231,7 @@ function App() {
                     section users can update and delete their reviews.</p>
                   <div className="mt-4 flex justify-between">
                     <a href="https://github.com/manisulislam/hotel_booking"  className="inline-block bg-gray-800 text-white py-2 px-4 rounded hover:bg-gray-900" target='blank'>GitHub</a>
-                    <a href="https://hotel-booking-r726.onrender.com/"  className="inline-block bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-900" target='blank'>Live Link</a>
+                    {/* <a href="https://hotel-booking-r726.onrender.com/"  className="inline-block bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-900" target='blank'>Live Link</a> */}
                   </div>
                 </div>
               </div>
