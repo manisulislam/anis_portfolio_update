@@ -1,79 +1,107 @@
-
+import { useState } from 'react';
 import './App.css';
 import Profile from "./assets/anisimage.png";
 import pImg1 from "./assets/hotel_1.jpg";
 import secondImg from "./assets/eco.jpg";
+import Experience from './components/Experience/Experience';
 
 
 
 function App() {
-  
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   return (
     <>
-      <header className='sticky top-0 -mt-5 bg-blue-900 relative'>
-        <div className="container m-auto">
-          <div className='flex justify-between items-center px-4 py-6 m-5'>
-            <div>
-              <a href="#" className='font-extrabold text-2xl text-white'> MD. ANISUL ISLAM</a>
-            </div>
-            <div>
-              <ul className='flex gap-3'>
-                <a href="#projects"><li className='text-gray-400 cursor-pointer hover:text-white font-bold'>Projects</li></a>
+      <header className='sticky top-0 bg-blue-900'>
+        <div className="container mx-auto px-4 py-6 flex items-center justify-between">
+          <a href="#" className='font-extrabold text-2xl text-white'>MD. ANISUL ISLAM</a>
 
-                <a href="#skills"><li className='text-gray-400 cursor-pointer hover:text-white font-bold'>Skills</li></a>
+          <button className="block lg:hidden text-white" onClick={toggleMenu}>
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
 
-                <a href="#about"><li className='text-gray-400 cursor-pointer hover:text-white font-bold'>About me</li></a>
+          <nav className='hidden lg:flex lg:items-center lg:gap-6'>
+            <a href="#projects" className='text-white cursor-pointer hover:text-gray-200 font-bold'>Projects</a>
+            <a href="#skills" className='text-white cursor-pointer hover:text-gray-200 font-bold'>Skills</a>
+            <a href="#about" className='text-white cursor-pointer hover:text-gray-200 font-bold'>About me</a>
+            <a href="#contact" className='text-white cursor-pointer hover:text-gray-200 font-bold'>Contact us</a>
+            <a href="#education" className='text-white cursor-pointer hover:text-gray-200 font-bold'>Education</a>
+          </nav>
+        </div>
 
-                <a href="#contact"><li className='text-gray-400 cursor-pointer hover:text-white font-bold'>Contact us</li></a>
-
-                <a href="#education"><li className='text-gray-400 cursor-pointer hover:text-white font-bold'>Education</li></a>
-
-              </ul>
-            </div>
+        {/* Off-canvas Menu */}
+        <div className={`fixed inset-0 bg-blue-800 text-white transform transition-transform ${isMenuOpen ? 'translate-x-0' : '-translate-x-full'} lg:hidden`}>
+          <div className="flex flex-col items-center p-4">
+            <button className="absolute top-4 right-4 text-white" onClick={toggleMenu}>
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+            <a href="#projects" className='py-2 text-lg hover:text-gray-300' onClick={toggleMenu}>Projects</a>
+            <a href="#skills" className='py-2 text-lg hover:text-gray-300' onClick={toggleMenu}>Skills</a>
+            <a href="#about" className='py-2 text-lg hover:text-gray-300' onClick={toggleMenu}>About me</a>
+            <a href="#contact" className='py-2 text-lg hover:text-gray-300' onClick={toggleMenu}>Contact us</a>
+            <a href="#education" className='py-2 text-lg hover:text-gray-300' onClick={toggleMenu}>Education</a>
           </div>
         </div>
       </header>
 
+
+
       {/* main section */}
       <main>
         {/* banner */}
-        <div className='flex justify-center items-center p-2 mt-5'>
-          <div className='p-5'>
-            <h2 className='text-2xl font-bold text-white '>I am MD. Anisul Islam</h2>
-            <h2 className='text-2xl font-bold  mt-2 text-blue-700'>Full Stack Developer (Django and React)</h2>
-            <p className='text-1xl font-bold text-white mt-4'>As a highly motivated and detail-oriented Full Stack Developer <br />  with expertise in Django and React, <br /> I am eager to
-            leverage my skills in building dynamic and responsive web applications. <br /> Seeking to contribute to a forward-thinking <br />
-            company where I can apply my technical knowledge,<br /> problem-solving abilities, <br /> and passion for continuous
-            learning to develop innovative solutions<br /> that drive business success and enhance user experiences.</p>
-            <div className='flex gap-4'>
+        <div className='flex flex-col md:flex-row justify-center items-center p-2 mt-5'>
+          <div className='p-5 text-center md:text-left'>
+            <h2 className='text-2xl font-bold text-white'>I am MD. Anisul Islam</h2>
+            <h2 className='text-2xl font-bold mt-2 text-blue-700'>Full Stack Developer (Django and React)</h2>
+            <p className='text-xl font-bold text-white mt-4'>
+              As a highly motivated and detail-oriented Full Stack Developer <br />
+              with expertise in Django and React, <br />
+              I am eager to leverage my skills in building dynamic and responsive web applications. <br />
+              Seeking to contribute to a forward-thinking <br />
+              company where I can apply my technical knowledge,<br />
+              problem-solving abilities, <br />
+              and passion for continuous learning to develop innovative solutions<br />
+              that drive business success and enhance user experiences.
+            </p>
+            <div className='flex flex-col md:flex-row gap-4 mt-6'>
               <div>
-                <a href="https://drive.google.com/file/d/1tPjvEIgMi3yd4aPctXAD4XPLrGm-l_8j/view?usp=sharing" target='blank'>
-                  <button className="bg-blue-500 hover:bg-blue-700 mt-6 text-white font-bold py-2 px-4 rounded">
+                <a href="https://drive.google.com/file/d/1ywSy1XJLeOrZsbRzApxtB8dA_6jNmgP5/view?usp=sharing" target='blank'>
+                  <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full md:w-auto">
                     Resume
                   </button>
                 </a>
               </div>
               <div>
-                <a href="https://drive.google.com/file/d/18b8QpCu0KDSwp5dQX2xHFMZOHUaIPcoD/view?usp=sharing" target='blank'>
-                  <button className="bg-blue-500 hover:bg-blue-700 mt-6 text-white font-bold py-2 px-4 rounded">
+                <a href="https://drive.google.com/file/d/1mRf3z_xVvJpnb3Rbto0rZJ2Kjg5uJ8wy/view?usp=sharing" target='blank'>
+                  <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full md:w-auto">
                     CV
                   </button>
                 </a>
               </div>
             </div>
           </div>
-          <div>
-            <img src={Profile} alt="" className='w-full p-10' />
+          <div className='mt-6 md:mt-0'>
+            <img src={Profile} alt="" className='w-full p-5 rounded-lg' />
           </div>
         </div>
+
+
+
         {/* skill section */}
-        <div id="skills" className="py-12 bg-black">
+        <div id="skills" className="py-12 bg-slate-950">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl font-extrabold text-white">Technical Skills:</h2>
             <div >
               <h2 className='mt-4 text-2xl font-semibold text-white'>Expertise:</h2>
-              <div className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-4 lg:grid-cols-5">
+              <div className="mt-6 grid  gap-4 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5">
                 <div className="p-4 bg-white hover:bg-blue-900 rounded-lg shadow-md ">
                   <h3 className="text-1xl hover:text-white  font-semibold text-gray-900">HTML</h3>
 
@@ -211,97 +239,117 @@ function App() {
             </div>
           </div>
         </section>
+
+
+
         {/* project section */}
-        <section id='projects' className="py-12 bg-black">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-extrabold text-slate-100">Projects</h2>
-            <div className="mt-6 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-              <div className="bg-white overflow-hidden shadow-md rounded-lg transform transition duration-500 hover:scale-105">
-                <img className="w-full h-48 object-cover" src={pImg1} alt="Project 1" />
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-900">➤The Lakefront- Hotel Booking Site</h3>
-                  <h3 className="text-1xl font-bold text-gray-900">Features:</h3>
-                  <p className="mt-2 text-gray-600">1. When a Register user receives an email for verification. After email verification,
-                    user can access their resources.
-                    <br />
-                    2. Users book their hotel after depositing money into their balance. Then receive an
-                    email for hotel book confirmation.
-                    <br />
-                    3. Write reviews if the user is authenticated and stays at that hotel. In the profile
-                    section users can update and delete their reviews.</p>
-                  <div className="mt-4 flex justify-between">
-                    <a href="https://github.com/manisulislam/hotel_booking"  className="inline-block bg-gray-800 text-white py-2 px-4 rounded hover:bg-gray-900" target='blank'>GitHub</a>
-                    {/* <a href="https://hotel-booking-r726.onrender.com/"  className="inline-block bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-900" target='blank'>Live Link</a> */}
-                  </div>
-                </div>
-              </div>
-              {/* second project */}
-              <div className="bg-white overflow-hidden shadow-md rounded-lg transform transition duration-500 hover:scale-105">
-                <img className="w-full h-48 object-cover" src={secondImg} alt="Project 1" />
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-900">➤ Eco Elite Empire</h3>
-                  <h3 className="text-1xl font-bold text-gray-900">Features:</h3>
-                  <p className="mt-2 text-gray-600">
-                      1.Authentication and Authorization: Implemented using Djoser, with email verification. <br />
-                      2. Email Notifications: Users receive notifications via email.<br />
-                      3. UI/UX: Developed a user-friendly interface with React and Tailwind CSS.<br />
-                      4. State Management: Utilized Redux Toolkit for managing user, cart, shipping, etc.<br />
-                      5. Payment Gateway: Integrated SSLCommerz sandbox for payment processing.<br />
-                      6. Review System: Users can write reviews. Includes a client dashboard to view overall activity.</p>
-                  <div className="mt-4 flex justify-between">
-                    <a href="https://github.com/manisulislam/eco_lite_empire_frontend"  className="inline-block bg-gray-800 text-white py-2 px-4 rounded hover:bg-gray-900" target='blank'>frontend</a>
-                    <a href="https://github.com/manisulislam/eco_elite_empire_backend" className="inline-block bg-gray-800 text-white py-2 px-4 rounded hover:bg-gray-900" target='blank'>Backend</a>
-                    
-                  </div>
-                </div>
-              </div>
-              {/* Repeat the above structure for each project card */}
-            </div>
+        <section id='projects' className="py-12 bg-slate-900">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 className="text-3xl font-extrabold text-slate-100">Projects</h2>
+    <div className="mt-6 space-y-8">
+      {/* First Project */}
+      <div className="flex flex-col sm:flex-row bg-white shadow-md rounded-lg overflow-hidden transition duration-500 transform hover:-translate-y-1 hover:scale-105 p-4 sm:p-6">
+        <img className="w-full sm:w-1/3 h-auto object-cover aspect-w-16 aspect-h-9" src={pImg1} alt="Project 1" />
+        <div className="p-4 sm:p-6 flex-1">
+          <h3 className="text-xl font-semibold text-gray-900">➤ The Lakefront - Hotel Booking Site</h3>
+          <h4 className="text-lg font-bold text-gray-900 mt-2">Features:</h4>
+          <p className="mt-2 text-gray-600">
+            1. Users receive an email for verification after registering. Once verified, they can access their resources.
+            <br />
+            2. Users can book a hotel after depositing money into their balance and receive a confirmation email.
+            <br />
+            3. Authenticated users who stayed at a hotel can write reviews. They can update and delete reviews in the profile section.
+          </p>
+          <div className="mt-4 flex flex-col sm:flex-row justify-start space-y-4 sm:space-y-0 sm:space-x-4">
+            <a href="https://github.com/manisulislam/hotel_booking" className="inline-block bg-gray-800 text-white py-2 px-4 rounded hover:bg-gray-900" target='blank'>GitHub</a>
+            {/* <a href="https://hotel-booking-r726.onrender.com/" className="inline-block bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-900" target='_blank'>Live Link</a> */}
           </div>
-        </section>
+        </div>
+      </div>
+      {/* Second Project */}
+      <div className="flex flex-col sm:flex-row bg-white shadow-md rounded-lg overflow-hidden transition duration-500 transform hover:-translate-y-1 hover:scale-105 p-4 sm:p-6">
+        <img className="w-full sm:w-1/3 h-auto object-cover aspect-w-16 aspect-h-9" src={secondImg} alt="Project 2" />
+        <div className="p-4 sm:p-6 flex-1">
+          <h3 className="text-xl font-semibold text-gray-900">➤ Eco Elite Empire</h3>
+          <h4 className="text-lg font-bold text-gray-900 mt-2">Features:</h4>
+          <p className="mt-2 text-gray-600">
+            1. Authentication and Authorization using Djoser, with email verification.
+            <br />
+            2. Email Notifications for user interactions.
+            <br />
+            3. Developed a user-friendly UI/UX with React and Tailwind CSS.
+            <br />
+            4. Managed state using Redux Toolkit for user, cart, shipping, etc.
+            <br />
+            5. Integrated SSLCommerz sandbox for payment processing.
+            <br />
+            6. Users can write reviews, with a client dashboard to view overall activity.
+          </p>
+          <div className="mt-4 flex flex-col sm:flex-row justify-start space-y-4 sm:space-y-0 sm:space-x-4">
+            <a href="https://github.com/manisulislam/eco_lite_empire_frontend" className="inline-block bg-gray-800 text-white py-2 px-4 rounded hover:bg-gray-900" target='blank'>Frontend</a>
+            <a href="https://github.com/manisulislam/eco_elite_empire_backend" className="inline-block bg-gray-800 text-white py-2 px-4 rounded hover:bg-gray-900" target='blank'>Backend</a>
+          </div>
+        </div>
+      </div>
+      {/* Repeat the above structure for each project card */}
+    </div>
+  </div>
+</section>
 
-       
+
+
+        {/* experinece section */}
+        <Experience />
+
         {/* timeline education*/}
-        <section id="education">
+        <section id="education" className="px-4 sm:px-6 lg:px-8 py-8">
+  <h1 className="text-white font-semibold text-2xl my-4 px-5 text-center sm:text-left">
+    My Education
+  </h1>
 
-          <h1 className='text-white font-semibold text-2xl my-4 px-5'>My Education</h1>
-          {/* <!-- This is an example component --> */}
-          <div className="max-w-2xl mx-auto">
+  <div className="max-w-2xl mx-auto">
+    <ol className="relative border-l border-gray-200 dark:border-gray-700">
+      <li className="mb-10 ml-2 sm:ml-4">
+        <div
+          className="absolute w-3 h-3 bg-gray-200 rounded-full -left-1.5 sm:-left-2.5 border border-white dark:border-gray-900 dark:bg-gray-700"
+        ></div>
 
+        <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+          August 2022
+        </time>
+        <h3 className="text-lg font-semibold text-slate-100 dark:text-white">
+          Admission In Port City International University, Chattogram. My Dream Department which is CSE
+        </h3>
+      </li>
 
+      <li className="mb-10 ml-2 sm:ml-4">
+        <div
+          className="absolute w-3 h-3 bg-gray-200 rounded-full -left-1.5 sm:-left-2.5 border border-white dark:border-gray-900 dark:bg-gray-700"
+        ></div>
+        <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+          March 2020
+        </time>
+        <h3 className="text-lg font-semibold text-slate-100 dark:text-white">
+          Completed Higher Secondary Certificate from Raozan Govt. College, Chattogram
+        </h3>
+      </li>
 
-            <ol className="relative border-l border-gray-200 dark:border-gray-700">
+      <li className="ml-2 sm:ml-4 mb-12">
+        <div
+          className="absolute w-3 h-3 bg-gray-200 rounded-full -left-1.5 sm:-left-2.5 border border-white dark:border-gray-900 dark:bg-gray-700"
+        ></div>
+        <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+          April 2022
+        </time>
 
+        <h3 className="text-lg font-semibold text-slate-100 dark:text-white">
+          Completed Secondary School Certificate from Raozan Govt. College, Chattogram
+        </h3>
+      </li>
+    </ol>
+  </div>
+</section>
 
-              <li className="mb-10 ml-2">
-                <div
-                  className="absolute w-3 h-3 bg-gray-200 rounded-full -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
-                </div>
-
-
-                <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">August 2022</time>
-                <h3 className="text-lg font-semibold text-slate-100 dark:text-white">Admission In Port City Internationa University, Chattogram. My Dream Department which is CSE</h3>
-              </li>
-              <li className="mb-10 ml-4">
-                <div
-                  className="absolute w-3 h-3 bg-gray-200 rounded-full -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
-                </div>
-                <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">March 2020</time>
-                <h3 className="text-lg font-semibold text-slate-100  dark:text-white">Completed Higher Secondary Certificate from Raozan Govt. College, Chattogram</h3>
-
-              </li>
-              <li className="ml-4 mb-12">
-                <div
-                  className="absolute w-3 h-3 bg-gray-200 rounded-full -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
-                </div>
-                <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">April 2022</time>
-
-                <h3 className="text-lg font-semibold text-slate-100  dark:text-white">Completed Secondary School Certificate from Raozan Govt. College, Chattogram</h3>
-              </li>
-            </ol>
-
-          </div>
-        </section>
 
         {/* Contact us section */}
         <section id="contact" className="py-12 bg-gray-200">
@@ -346,7 +394,7 @@ function App() {
           </div>
         </section>
         {/* footer */}
-        <footer className="p-4 bg-white rounded-lg shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800">
+        <footer className="p-4 bg-white shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800">
           <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 . All Rights Reserved.
           </span>
           <ul className="flex flex-wrap items-center mt-3 sm:mt-0">
