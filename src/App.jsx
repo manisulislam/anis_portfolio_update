@@ -4,6 +4,8 @@ import Profile from "./assets/anisimage.png";
 import pImg1 from "./assets/hotel_1.jpg";
 import secondImg from "./assets/eco.jpg";
 import Experience from './components/Experience/Experience';
+import ScrollProgressBar from './components/ScrollProgressBar/ScrollProgressBar';
+import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 
 
 
@@ -53,6 +55,11 @@ function App() {
       </header>
 
 
+      {/* scroll progressbar */}
+      <ScrollProgressBar/>
+
+      {/* scroll to top */}
+      <ScrollToTop/>
 
       {/* main section */}
       <main>
