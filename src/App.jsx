@@ -3,6 +3,8 @@ import './App.css';
 import Profile from "./assets/anisimage.png";
 import pImg1 from "./assets/hotel_1.jpg";
 import secondImg from "./assets/eco.jpg";
+import thirdImg from "./assets/next-code.jpg";
+import fourthImg from "./assets/rsa.jpg";
 import Experience from './components/Experience/Experience';
 import ScrollProgressBar from './components/ScrollProgressBar/ScrollProgressBar';
 import ScrollToTop from './components/ScrollToTop/ScrollToTop';
@@ -56,10 +58,10 @@ function App() {
 
 
       {/* scroll progressbar */}
-      <ScrollProgressBar/>
+      <ScrollProgressBar />
 
       {/* scroll to top */}
-      <ScrollToTop/>
+      <ScrollToTop />
 
       {/* main section */}
       <main>
@@ -82,7 +84,14 @@ function App() {
               <div>
                 <a href="https://drive.google.com/file/d/1ywSy1XJLeOrZsbRzApxtB8dA_6jNmgP5/view?usp=sharing" target='blank'>
                   <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full md:w-auto">
-                    Resume
+                    Full Stack Resume
+                  </button>
+                </a>
+              </div>
+              <div>
+                <a href="https://drive.google.com/file/d/1ywSy1XJLeOrZsbRzApxtB8dA_6jNmgP5/view?usp=sharing" target='blank'>
+                  <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full md:w-auto">
+                    Frontend Resume
                   </button>
                 </a>
               </div>
@@ -251,57 +260,117 @@ function App() {
 
         {/* project section */}
         <section id='projects' className="py-12 bg-slate-900">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <h2 className="text-3xl font-extrabold text-slate-100">Projects</h2>
-    <div className="mt-6 space-y-8">
-      {/* First Project */}
-      <div className="flex flex-col sm:flex-row bg-white shadow-md rounded-lg overflow-hidden p-4 sm:p-6">
-        <img className="w-full sm:w-1/3 h-auto object-cover aspect-w-16 aspect-h-9" src={pImg1} alt="Project 1" />
-        <div className="p-4 sm:p-6 flex-1">
-          <h3 className="text-xl font-semibold text-gray-900">➤ The Lakefront - Hotel Booking Site</h3>
-          <h4 className="text-lg font-bold text-gray-900 mt-2">Features:</h4>
-          <p className="mt-2 text-gray-600">
-            1. Users receive an email for verification after registering. Once verified, they can access their resources.
-            <br />
-            2. Users can book a hotel after depositing money into their balance and receive a confirmation email.
-            <br />
-            3. Authenticated users who stayed at a hotel can write reviews. They can update and delete reviews in the profile section.
-          </p>
-          <div className="mt-4 flex flex-col sm:flex-row justify-start space-y-4 sm:space-y-0 sm:space-x-4">
-            <a href="https://github.com/manisulislam/hotel_booking" className="inline-block bg-gray-800 text-white py-2 px-4 rounded hover:bg-gray-900" target='blank'>GitHub</a>
-            {/* <a href="https://hotel-booking-r726.onrender.com/" className="inline-block bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-900" target='_blank'>Live Link</a> */}
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-extrabold text-slate-100">Django and React Projects</h2>
+            <div className="mt-6 space-y-8">
+              {/* First Project */}
+              <div className="flex flex-col sm:flex-row bg-white shadow-md rounded-lg overflow-hidden p-4 sm:p-6">
+                <img className="w-full sm:w-1/3 h-auto object-cover aspect-w-16 aspect-h-9" src={pImg1} alt="Project 1" />
+                <div className="p-4 sm:p-6 flex-1">
+                  <h3 className="text-xl font-semibold text-gray-900">➤ The Lakefront - Hotel Booking Site</h3>
+                  <h4 className="text-lg font-bold text-gray-900 mt-2">Features:</h4>
+                  <p className="mt-2 text-gray-600">
+                    1. Users receive an email for verification after registering. Once verified, they can access their resources.
+                    <br />
+                    2. Users can book a hotel after depositing money into their balance and receive a confirmation email.
+                    <br />
+                    3. Authenticated users who stayed at a hotel can write reviews. They can update and delete reviews in the profile section.
+                  </p>
+                  <div className="mt-4 flex flex-col sm:flex-row justify-start space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="https://github.com/manisulislam/hotel_booking" className="inline-block bg-gray-800 text-white py-2 px-4 rounded hover:bg-gray-900" target='blank'>GitHub</a>
+                    {/* <a href="https://hotel-booking-r726.onrender.com/" className="inline-block bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-900" target='_blank'>Live Link</a> */}
+                  </div>
+                </div>
+              </div>
+              {/* Second Project */}
+              <div className="flex flex-col sm:flex-row bg-white shadow-md rounded-lg overflow-hidden p-4 sm:p-6">
+                <img className="w-full sm:w-1/3 h-auto object-cover aspect-w-16 aspect-h-9" src={secondImg} alt="Project 2" />
+                <div className="p-4 sm:p-6 flex-1">
+                  <h3 className="text-xl font-semibold text-gray-900">➤ Eco Elite Empire</h3>
+                  <h4 className="text-lg font-bold text-gray-900 mt-2">Features:</h4>
+                  <p className="mt-2 text-gray-600">
+                    1. Authentication and Authorization using Djoser, with email verification.
+                    <br />
+                    2. Email Notifications for user interactions.
+                    <br />
+                    3. Developed a user-friendly UI/UX with React and Tailwind CSS.
+                    <br />
+                    4. Managed state using Redux Toolkit for user, cart, shipping, etc.
+                    <br />
+                    5. Integrated SSLCommerz sandbox for payment processing.
+                    <br />
+                    6. Users can write reviews, with a client dashboard to view overall activity.
+                  </p>
+                  <div className="mt-4 flex flex-col sm:flex-row justify-start space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="https://github.com/manisulislam/eco_lite_empire_frontend" className="inline-block bg-gray-800 text-white py-2 px-4 rounded hover:bg-gray-900" target='blank'>Frontend</a>
+                    <a href="https://github.com/manisulislam/eco_elite_empire_backend" className="inline-block bg-gray-800 text-white py-2 px-4 rounded hover:bg-gray-900" target='blank'>Backend</a>
+                  </div>
+                </div>
+              </div>
+              <h2 className="text-3xl font-extrabold text-slate-100">Frontend Projects</h2>
+
+              {/* thrid project  */}
+              <div className="flex flex-col sm:flex-row bg-white shadow-md rounded-lg overflow-hidden p-4 sm:p-6">
+                <img className="w-full sm:w-1/3 h-auto object-cover aspect-w-16 aspect-h-9" src={thirdImg} alt="Project 2" />
+                <div className="p-4 sm:p-6 flex-1">
+                  <h3 className="text-xl font-semibold text-gray-900">➤ NEXT CODE PVT LTD</h3>
+                  <h4 className="text-lg font-bold text-gray-900 mt-2">Features:</h4>
+                  <p className="mt-2 text-gray-600">
+                    1. Responsive Design: Optimized for all device sizes, ensuring a smooth user experience across desktops, tablets,
+                    and smartphones
+                    <br />
+                    2. Interactive UI: Engaging, user-friendly interfaces with intuitive navigation and dynamic interactions.
+
+                    <br />
+                    3. Modern Technologies: Built with cutting-edge frontend frameworks like React, Angular, and Vue.js to ensure
+                    high performance and maintainability.
+                    <br />
+                    4. Cross-Browser Compatibility: Ensures consistent user experience across all major browsers.
+
+                  </p>
+                  <div className="mt-4 flex flex-col sm:flex-row justify-start space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="https://next-code-pvt-ltd.netlify.app/" className="inline-block bg-gray-800 text-white py-2 px-4 rounded hover:bg-gray-900" target='blank'>Frontend</a>
+                    <a href="https://github.com/manisulislam/next-code-pvt-ltd" className="inline-block bg-gray-800 text-white py-2 px-4 rounded hover:bg-gray-900" target='blank'>Github</a>
+                  </div>
+                </div>
+              </div>
+
+              {/* fourth projects */}
+              <div className="flex flex-col sm:flex-row bg-white shadow-md rounded-lg overflow-hidden p-4 sm:p-6">
+                <img className="w-full sm:w-1/3 h-auto object-cover aspect-w-16 aspect-h-9" src={fourthImg} alt="Project 2" />
+                <div className="p-4 sm:p-6 flex-1">
+                  <h3 className="text-xl font-semibold text-gray-900">➤ RSA Cryptography </h3>
+                  <h4 className="text-lg font-bold text-gray-900 mt-2">Features:</h4>
+                  <p className="mt-2 text-gray-600">
+                    1. RSA Encryption & Decryption: Users can generate public and private keys, and use them to encrypt and
+                    decrypt messages securely
+                    <br />
+                    2. Key Pair Generation: The tool allows users to generate RSA key pairs with customizable key sizes (e.g., 512-bit,
+                    1024-bit).
+
+                    <br />
+                    3. Secure Communication: The application facilitates secure message transmission using RSA is asymmetric
+                    encryption principles.
+
+                    <br />
+                    4. Interactive UI: User-friendly interface that simplifies the RSA process with clear instructions and real-time
+                    updates.
+                    <br />
+                    5. Educational Purpose: Aimed at helping users understand the fundamental principles of public-key cryptography
+                    through hands-on interaction.
+
+
+                  </p>
+                  <div className="mt-4 flex flex-col sm:flex-row justify-start space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="https://cryptography-bitwise-thinkers.netlify.app/" className="inline-block bg-gray-800 text-white py-2 px-4 rounded hover:bg-gray-900" target='blank'>Frontend</a>
+                    <a href="https://github.com/manisulislam/cryptograpy_tool" className="inline-block bg-gray-800 text-white py-2 px-4 rounded hover:bg-gray-900" target='blank'>Github</a>
+                  </div>
+                </div>
+              </div>
+              {/* Repeat the above structure for each project card */}
+            </div>
           </div>
-        </div>
-      </div>
-      {/* Second Project */}
-      <div className="flex flex-col sm:flex-row bg-white shadow-md rounded-lg overflow-hidden p-4 sm:p-6">
-        <img className="w-full sm:w-1/3 h-auto object-cover aspect-w-16 aspect-h-9" src={secondImg} alt="Project 2" />
-        <div className="p-4 sm:p-6 flex-1">
-          <h3 className="text-xl font-semibold text-gray-900">➤ Eco Elite Empire</h3>
-          <h4 className="text-lg font-bold text-gray-900 mt-2">Features:</h4>
-          <p className="mt-2 text-gray-600">
-            1. Authentication and Authorization using Djoser, with email verification.
-            <br />
-            2. Email Notifications for user interactions.
-            <br />
-            3. Developed a user-friendly UI/UX with React and Tailwind CSS.
-            <br />
-            4. Managed state using Redux Toolkit for user, cart, shipping, etc.
-            <br />
-            5. Integrated SSLCommerz sandbox for payment processing.
-            <br />
-            6. Users can write reviews, with a client dashboard to view overall activity.
-          </p>
-          <div className="mt-4 flex flex-col sm:flex-row justify-start space-y-4 sm:space-y-0 sm:space-x-4">
-            <a href="https://github.com/manisulislam/eco_lite_empire_frontend" className="inline-block bg-gray-800 text-white py-2 px-4 rounded hover:bg-gray-900" target='blank'>Frontend</a>
-            <a href="https://github.com/manisulislam/eco_elite_empire_backend" className="inline-block bg-gray-800 text-white py-2 px-4 rounded hover:bg-gray-900" target='blank'>Backend</a>
-          </div>
-        </div>
-      </div>
-      {/* Repeat the above structure for each project card */}
-    </div>
-  </div>
-</section>
+        </section>
 
 
 
@@ -310,52 +379,52 @@ function App() {
 
         {/* timeline education*/}
         <section id="education" className="px-4 sm:px-6 lg:px-8 py-8">
-  <h1 className="text-white font-semibold text-2xl my-4 px-5 text-center sm:text-left">
-    My Education
-  </h1>
+          <h1 className="text-white font-semibold text-2xl my-4 px-5 text-center sm:text-left">
+            My Education
+          </h1>
 
-  <div className="max-w-2xl mx-auto">
-    <ol className=" border-l border-gray-200 dark:border-gray-700">
-      <li className="mb-10 ml-2 sm:ml-4">
-        <div
-          className=" w-3 h-3 bg-gray-200 rounded-full -left-1.5 sm:-left-2.5 border border-white dark:border-gray-900 dark:bg-gray-700"
-        ></div>
+          <div className="max-w-2xl mx-auto">
+            <ol className=" border-l border-gray-200 dark:border-gray-700">
+              <li className="mb-10 ml-2 sm:ml-4">
+                <div
+                  className=" w-3 h-3 bg-gray-200 rounded-full -left-1.5 sm:-left-2.5 border border-white dark:border-gray-900 dark:bg-gray-700"
+                ></div>
 
-        <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
-          August 2022
-        </time>
-        <h3 className="text-lg font-semibold text-slate-100 dark:text-white">
-          Admission In Port City International University, Chattogram. My Dream Department which is CSE
-        </h3>
-      </li>
+                <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+                  August 2022
+                </time>
+                <h3 className="text-lg font-semibold text-slate-100 dark:text-white">
+                  Admission In Port City International University, Chattogram. My Dream Department which is CSE
+                </h3>
+              </li>
 
-      <li className="mb-10 ml-2 sm:ml-4">
-        <div
-          className="absolute w-3 h-3 bg-gray-200 rounded-full -left-1.5 sm:-left-2.5 border border-white dark:border-gray-900 dark:bg-gray-700"
-        ></div>
-        <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
-          March 2020
-        </time>
-        <h3 className="text-lg font-semibold text-slate-100 dark:text-white">
-          Completed Higher Secondary Certificate from Raozan Govt. College, Chattogram
-        </h3>
-      </li>
+              <li className="mb-10 ml-2 sm:ml-4">
+                <div
+                  className="absolute w-3 h-3 bg-gray-200 rounded-full -left-1.5 sm:-left-2.5 border border-white dark:border-gray-900 dark:bg-gray-700"
+                ></div>
+                <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+                  March 2020
+                </time>
+                <h3 className="text-lg font-semibold text-slate-100 dark:text-white">
+                  Completed Higher Secondary Certificate from Raozan Govt. College, Chattogram
+                </h3>
+              </li>
 
-      <li className="ml-2 sm:ml-4 mb-12">
-        <div
-          className="absolute w-3 h-3 bg-gray-200 rounded-full -left-1.5 sm:-left-2.5 border border-white dark:border-gray-900 dark:bg-gray-700"
-        ></div>
-        <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
-          April 2022
-        </time>
+              <li className="ml-2 sm:ml-4 mb-12">
+                <div
+                  className="absolute w-3 h-3 bg-gray-200 rounded-full -left-1.5 sm:-left-2.5 border border-white dark:border-gray-900 dark:bg-gray-700"
+                ></div>
+                <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+                  April 2022
+                </time>
 
-        <h3 className="text-lg font-semibold text-slate-100 dark:text-white">
-          Completed Secondary School Certificate from Raozan Govt. College, Chattogram
-        </h3>
-      </li>
-    </ol>
-  </div>
-</section>
+                <h3 className="text-lg font-semibold text-slate-100 dark:text-white">
+                  Completed Secondary School Certificate from Raozan Govt. College, Chattogram
+                </h3>
+              </li>
+            </ol>
+          </div>
+        </section>
 
 
         {/* Contact us section */}
