@@ -1,12 +1,20 @@
 const experiences = [
-    {
-      company: 'Universe Soft Tech',
-      role: 'Python Django Developer',
-      duration: 'April 2024 - Jun 2024',
-      description: 'Developed and maintained web applications using React, Django, and PostgreSQL. Improved site performance and collaborated with cross-functional teams.',
-    }
-    // Add more experiences as needed
-  ];
+  {
+    company: 'Universe Soft Tech',
+    role: 'Python Django Developer',
+    duration: 'April 2024 - Jun 2024',
+    description: `
+      ● Collaborated with experienced team members to develop Python and Django projects, 
+        contributing to backend functionality and database management.
+      ● Designed and implemented user-friendly interfaces for web applications, 
+        enhancing user experience and engagement.
+      ● Ensured consistency and coherence in design across all platforms, 
+        maintaining a unified and professional appearance.
+      `
+
+  }
+  // Add more experiences as needed
+];
 const Experience = () => {
   return (
     <div className="bg-gray-100 py-16 px-4 sm:px-6 lg:px-8">
@@ -31,7 +39,7 @@ const Experience = () => {
                   {experience.duration}
                 </span>
               </div>
-              <p className="mt-4 text-gray-700">{experience.description}</p>
+              <pre className=" text-gray-700">{experience.description}</pre>
             </div>
           ))}
         </div>
