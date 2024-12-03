@@ -446,7 +446,7 @@ function App() {
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-gray-600 mr-3" viewBox="0 0 24 24" fill="currentColor">
                   <path fillRule="evenodd" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM9.47 17.97H7V10.6h2.47v7.38zm-1.24-8.66c-.97 0-1.75-.79-1.75-1.76s.78-1.76 1.75-1.76 1.75.79 1.75 1.76-.78 1.76-1.75 1.76zm8.75 8.66h-2.48V13.6c0-.47.16-.78.53-.93.35-.15.82-.18 1.29-.18.47 0 .8.05 1.03.18.21.12.35.34.35.64v4.04h-2.47v-3.22c0-.24-.12-.47-.36-.57-.24-.1-.61-.15-1.07-.15-.48 0-.84.15-1.09.36-.24.21-.36.5-.36.81v2.77H12v-3.21c0-.47.16-.78.53-.93.35-.15.82-.18 1.29-.18.47 0 .8.05 1.03.18.21.12.35.34.35.64v4.04z" clipRule="evenodd" />
                 </svg>
-                <a href="mailto:anisulislam980340@gamil.com" className="text-gray-800">anisulislam980340@gamil.com</a>
+                <a href="mailto:anisulislam980340@gamil.com" className="text-gray-800">anisulislam9834@gamil.com</a>
               </div>
               <div className="flex items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-gray-600 mr-3" viewBox="0 0 24 24" fill="currentColor">
