@@ -18,7 +18,7 @@ const Experience = () => {
           {experiences.map((experience, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg shadow-lg p-6  hover:-translate-y-2 transition-transform duration-300"
+              className="bg-white rounded-lg shadow-lg p-6  transition-transform duration-300"
             >
               <div className="flex items-center justify-between">
                 <div>

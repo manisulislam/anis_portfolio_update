@@ -248,7 +248,7 @@ function App() {
     <h2 className="text-3xl font-extrabold text-slate-100">Projects</h2>
     <div className="mt-6 space-y-8">
       {/* First Project */}
-      <div className="flex flex-col sm:flex-row bg-white shadow-md rounded-lg overflow-hidden transition duration-500 transform hover:-translate-y-1 hover:scale-105 p-4 sm:p-6">
+      <div className="flex flex-col sm:flex-row bg-white shadow-md rounded-lg overflow-hidden p-4 sm:p-6">
         <img className="w-full sm:w-1/3 h-auto object-cover aspect-w-16 aspect-h-9" src={pImg1} alt="Project 1" />
         <div className="p-4 sm:p-6 flex-1">
           <h3 className="text-xl font-semibold text-gray-900">➤ The Lakefront - Hotel Booking Site</h3>
@@ -267,7 +267,7 @@ function App() {
         </div>
       </div>
       {/* Second Project */}
-      <div className="flex flex-col sm:flex-row bg-white shadow-md rounded-lg overflow-hidden transition duration-500 transform hover:-translate-y-1 hover:scale-105 p-4 sm:p-6">
+      <div className="flex flex-col sm:flex-row bg-white shadow-md rounded-lg overflow-hidden p-4 sm:p-6">
         <img className="w-full sm:w-1/3 h-auto object-cover aspect-w-16 aspect-h-9" src={secondImg} alt="Project 2" />
         <div className="p-4 sm:p-6 flex-1">
           <h3 className="text-xl font-semibold text-gray-900">➤ Eco Elite Empire</h3>
@@ -308,10 +308,10 @@ function App() {
   </h1>
 
   <div className="max-w-2xl mx-auto">
-    <ol className="relative border-l border-gray-200 dark:border-gray-700">
+    <ol className=" border-l border-gray-200 dark:border-gray-700">
       <li className="mb-10 ml-2 sm:ml-4">
         <div
-          className="absolute w-3 h-3 bg-gray-200 rounded-full -left-1.5 sm:-left-2.5 border border-white dark:border-gray-900 dark:bg-gray-700"
+          className=" w-3 h-3 bg-gray-200 rounded-full -left-1.5 sm:-left-2.5 border border-white dark:border-gray-900 dark:bg-gray-700"
         ></div>
 
         <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
