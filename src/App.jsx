@@ -82,21 +82,21 @@ function App() {
             </p>
             <div className='flex flex-col md:flex-row gap-4 mt-6'>
               <div>
-                <a href="https://drive.google.com/file/d/1ywSy1XJLeOrZsbRzApxtB8dA_6jNmgP5/view?usp=sharing" target='blank'>
+                <a href="https://docs.google.com/document/d/1cXyRl3NQMGZ4QNzargR62vQ0k3zB2qEDQAaQGP3At14/edit?usp=sharing" target='blank'>
                   <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full md:w-auto">
                     Full Stack Resume
                   </button>
                 </a>
               </div>
               <div>
-                <a href="https://drive.google.com/file/d/1ywSy1XJLeOrZsbRzApxtB8dA_6jNmgP5/view?usp=sharing" target='blank'>
+                <a href="https://docs.google.com/document/d/1xsuco05fgDsWNFitNPdae_oIxiaxisDrz5Qt_xVac1Q/edit?usp=sharing" target='blank'>
                   <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full md:w-auto">
                     Frontend Resume
                   </button>
                 </a>
               </div>
               <div>
-                <a href="https://drive.google.com/file/d/1mRf3z_xVvJpnb3Rbto0rZJ2Kjg5uJ8wy/view?usp=sharing" target='blank'>
+                <a href="https://docs.google.com/document/d/1jzCXrGt7zt_4ptoNg-LW-2UCuvV7P-RfcVddsCxmv_g/edit?usp=sharing" target='blank'>
                   <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full md:w-auto">
                     CV
                   </button>
